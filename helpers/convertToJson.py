@@ -28,7 +28,7 @@ def csv_to_json(file_path: str) -> dict:
     provinces = ["Nova Scotia", "New Brunswick", "Prince Edward Island"]
 
     # create a dict for the data we are going to send back
-    data = {"data": []}
+    data = {"projects": []}
 
     if data_file.is_file():
         with open(file_path, "r", encoding="utf-8") as file:
@@ -36,7 +36,7 @@ def csv_to_json(file_path: str) -> dict:
             for line in reader:
                 if (line[10] == provinces[0] or line[10] == provinces[1] or line[10] == provinces[2]) and \
                         line[1] == "Affordable Housing Fund":
-                    data["data"].append(format_data(line))
+                    data["projects"].append(format_data(line))
 
     return data
 
