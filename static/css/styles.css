@@ -3,23 +3,35 @@
     src: url("../fonts/AfacadFlux-Bold.ttf");
 }
 
-html,body, #map-container {
+html,body{
     font-family: "Afacad Flux", sans-serif;
-    height: 100%;
     background-color: #334155;
+    height: 100%;
     color: #dcf2ff;
 }
 
-#app-layout{
-    display: grid;
+#app-container{
+    height: 100%;
 }
 
-.test-txt{
-    z-index: 2;
+#map-container{
+    display: flex;
+    height: 100%;
 }
 
 #map {
+    display: flex;
     border-radius: 4px;
     height: 75%;
     width: 50%;
+    gap: 20px;
+}
+
+.stats{
+    border: None;
+    border-radius: 4px;
+    padding: 10px;
+    margin-left: 40px;
+    background-color: #637187;
+    height: min-content;
 }

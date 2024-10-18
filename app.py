@@ -1,21 +1,16 @@
 from flask import Flask, jsonify, render_template
-from helpers.convertToJson import csv_to_json
-from helpers.getHousingData import get_data
-import os
+from helpers.HousingData import statcan_data, csv_to_json
+from helpers.FoodBankData import food_bank_data
 
 app = Flask(__name__)
 
-FILE_PATH = "data/download_data.csv"
+PROJECTS_PATH = "data/download_data.csv"
+FOODBANK_PATH = "data/foodbanks_ATLANTIC.csv"
 
 
 @app.route("/")
 def index():
-    # if not os.path.isdir("data"):
-    #     os.mkdir("data")
-    #     print("data folder created")
-    # else:
-    #     print("data folder already exsists")
-    get_data()
+    statcan_data()
     return render_template("index.html")
 
 
@@ -26,7 +21,10 @@ def test():
 
 @app.route("/api/get-data")
 def send_data():
-    return jsonify(csv_to_json(FILE_PATH))
+    final_json = {}
+    final_json["projects"] = csv_to_json(PROJECTS_PATH)['projects']
+    final_json["food_banks"] = food_bank_data(FOODBANK_PATH)['food_banks']
+    return jsonify(final_json)
 
 
 if __name__ == "__main__":

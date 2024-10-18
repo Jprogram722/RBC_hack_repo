@@ -48,4 +48,4 @@ for coordinate in coordinates:
 
 # Step 3: Convert the JSON data to a DataFrame and save as CSV
 df = pd.DataFrame(all_data)
-df.to_csv("./data/foodbanks_NS.csv", index=False)
+df.to_csv("./data/foodbanks_ATLANTIC.csv", index=False)

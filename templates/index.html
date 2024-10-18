@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Website</title>
+    <title>RBC Hackathon Website</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/leaflet/dist/leaflet.css')}}">
 
@@ -17,13 +17,15 @@
 </head>
 
 <body>
-    <section id="app-layout">
+    <div id="app-container">
         <h1>Map Of Projects</h1>
-        <p class="test-txt">hello</p>
         <div id="map-container">
             <div id="map"></div>
+            <div class="stats">
+                <p>Hello</p>  
+            </div>
         </div>
-    </section>
+    </div>
 </body>
 
 </html>
