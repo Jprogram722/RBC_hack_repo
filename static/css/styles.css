@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Afacad Flux", sans-serif;
+    src: url("../fonts/AfacadFlux-Bold.ttf");
+}
+
+html {
+    font-family: "Afacad Flux", sans-serif;
+}
