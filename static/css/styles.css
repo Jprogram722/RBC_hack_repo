@@ -3,6 +3,18 @@
     src: url("../fonts/AfacadFlux-Bold.ttf");
 }
 
-html {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
     font-family: "Afacad Flux", sans-serif;
+    height: 100%;
+}
+
+#map {
+    height: 50%;
+    width: 50%;
 }

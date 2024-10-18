@@ -1,3 +1,4 @@
 venv
 __pycache__
 data/download_data.csv
+static/node_modules
