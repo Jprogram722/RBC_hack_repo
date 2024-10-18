@@ -1,0 +1,17 @@
+{
+  "name": "static",
+  "version": "1.0.0",
+  "description": "modules for the housing dashboard ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "housing"
+  ],
+  "author": "Jared",
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  }
+}
