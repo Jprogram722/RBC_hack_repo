@@ -10,6 +10,10 @@
 
     <script src="{{ url_for('static', filename='node_modules/leaflet/dist/leaflet.js')}}"></script>
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.css') }}">
+
+    <script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.js') }}"></script>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
 
     <!-- OUR JS SCRIPT -->
@@ -18,11 +22,28 @@
 
 <body>
     <div id="app-container">
-        <h1>Map Of Projects</h1>
+        <h1 id="title">Housing and Poverty Visual</h1>
+        <div class="sidebar">
+            <div>
+                <input type="radio" class="radio" id="all" value="All" checked>
+                <label for="all">All</label>
+            </div>
+            <div>
+                <input type="radio" id="projects" class="radio" value="Projects">
+                <label for="projects">Projects</label>
+            </div>
+            <div>
+                <input type="radio" class="radio" id="food-bank" value="Food Banks">
+                <label for="food-bank">Food Bank</label>
+            </div>
+        </div>
         <div id="map-container">
             <div id="map"></div>
             <div class="stats">
-                <p>Hello</p>  
+                <p id="num-proj">Number of affordable housing projects:</p>
+            </div>
+            <div class="stats">
+                <p id="num-food-banks"></p>
             </div>
         </div>
     </div>
