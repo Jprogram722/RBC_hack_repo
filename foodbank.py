@@ -4,10 +4,13 @@ import pandas as pd
 
 # Step 1: Define the coordinates
 coordinates = [
+    #Nova Scotia
     {"southwestCorner": {"lat": 44.09987583855046, "lng": -64.8595484109375}, "northeastCorner": {"lat": 46.039362563179, "lng": -62.233815989062506}},
+   #New Brunsweek
     {"southwestCorner": {"lat": 45.6129205149985, "lng": -67.77478261093749}, "northeastCorner": {"lat": 47.501280262588544, "lng": -65.14905018906249}},
-    {"southwestCorner": {"lat": 44.59966689435915, "lng": -63.920805876367204}, "northeastCorner": {"lat": 44.84360876459064, "lng": -63.59258932363283}},
-    {"southwestCorner": {"lat": 50.93922849829016, "lng": -66.99022344375}, "northeastCorner": {"lat": 57.35750527076548, "lng": -56.48729375625}}
+    #PEI
+    {"southwestCorner":{"lat":45.36212212573697,"lng":-64.45896721093747},"northeastCorner":{"lat":47.259043947075874,"lng":-61.83323478906247}},
+    
 ]
 
 # Initialize an empty list to store all results
