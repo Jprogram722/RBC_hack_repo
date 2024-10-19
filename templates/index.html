@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RBC Hackathon Website</title>
+    <title>The Lit Up Ham</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/leaflet/dist/leaflet.css')}}">
 
@@ -21,32 +21,51 @@
 </head>
 
 <body>
-    <div id="app-container">
-        <h1 id="title">Housing and Poverty Visual</h1>
-        <div class="sidebar">
-            <div>
-                <input type="radio" class="radio" id="all" value="All" checked>
-                <label for="all">All</label>
-            </div>
-            <div>
-                <input type="radio" id="projects" class="radio" value="Projects">
-                <label for="projects">Projects</label>
-            </div>
-            <div>
-                <input type="radio" class="radio" id="food-bank" value="Food Banks">
-                <label for="food-bank">Food Bank</label>
-            </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div>
+            <h1>The Lit Up Ham</h1>
+            <p>Scaling real-time solutions for housing and poverty</p>
         </div>
-        <div id="map-container">
+        <div>
+            <a href="#policy">Policy</a>
+            <a href="#report">Report</a>
+            <a href="#support">Support</a>
+            <a href="#home">Home</a>
+        </div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="container">
+        <!-- Project/Map Section -->
+        <div class="project">
             <div id="map"></div>
-            <div class="stats">
-                <p id="num-proj">Number of affordable housing projects:</p>
+        </div>
+
+        <!-- Graphs Section -->
+        <div class="graphs">
+            <div class="graph">
+                <h2>House Price</h2>
+                <p>Graph goes here</p>
             </div>
-            <div class="stats">
-                <p id="num-food-banks"></p>
+            <div class="graph">
+                <h2>Population</h2>
+                <p>Bar chart goes here</p>
             </div>
         </div>
     </div>
+
+    <div id="report">
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 The Lit Up Ham</p>
+    </div>
+
+</body>
 </body>
 
 </html>

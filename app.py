@@ -28,4 +28,4 @@ def send_data():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="localhost", debug=True)

@@ -14,7 +14,7 @@
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    
+
     // create project icon
     const projectIcon = L.icon({
         iconUrl: '/static/images/project-management.png',
@@ -28,18 +28,15 @@
     });
 
     const renderData = async () => {
-        const numProjectContainer = document.querySelector("#num-proj");
 
         const res = await fetch("/api/get-data");
         data = await res.json();
 
         console.log(data.projects);
 
-        numProjectContainer.textContent += ` ${data.projects.length}`
-
         data.projects.forEach(project => {
 
-            let marker = L.marker([project.Latitude, project.Longitude], {icon: projectIcon})
+            let marker = L.marker([project.Latitude, project.Longitude], { icon: projectIcon })
             marker.bindPopup(
                 `
                 <p>Department Name: ${project.DepartmentName}</p>
@@ -57,7 +54,7 @@
 
         data.food_banks.forEach(foodBank => {
 
-            let marker = L.marker([foodBank.Lat, foodBank.Lng], {icon: foodIcon})
+            let marker = L.marker([foodBank.Lat, foodBank.Lng], { icon: foodIcon })
             marker.bindPopup(
                 `
                 <p>Org Name: ${foodBank.Name}</p>
@@ -71,13 +68,16 @@
             )
             marker.addTo(map)
         });
-
-        
     }
 
-    for(let i = 0; i < radioBtn.length; i++) {
+    const mapSelect = () => {
 
     }
 
     renderData();
+
+    for (let i = 0; i < radioBtn.length; i++) {
+        radioBtn[i].addEventListener
+    }
+
 })();
