@@ -70,14 +70,20 @@
         });
     }
 
-    const mapSelect = () => {
-
+    for (let i = 0; i < radioBtn.length; i++) {
+        radioBtn[i].addEventListener('click', (e) => {
+            let selected = e.target.value;
+            radioBtn.forEach(btn => {
+                if (btn.value === selected) {
+                    btn.checked = true;
+                }
+                else {
+                    btn.checked = false;
+                }
+            })
+        });
     }
 
     renderData();
-
-    for (let i = 0; i < radioBtn.length; i++) {
-        radioBtn[i].addEventListener
-    }
 
 })();
